@@ -11,7 +11,7 @@ function success(position){
     const longitude=position.coords.longitude;
 
     const apiKey='2282a9794ad14a0083e123839232506';
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${latitude},${longitude}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${latitude},${longitude}`;
 
     fetch(url)
     .then((response)=> response.json())
