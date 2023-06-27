@@ -1,50 +1,73 @@
-body{
+body {
   background-color: #131010;
 }
 .container {
-    width: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    background-color:#3D5F5D;
-    height: 1000px;
-    grid-gap: 0px;
-    justify-items: center;
-    margin-top: 100px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #3d5f5d;
+  height: 1000px;
+  grid-gap: 0px;
+  justify-items: center;
+  margin-top: 100px;
+}
+.container:hover,
+#weather:hover,
+#location:hover {
+  transform: scale(1.15);
+}
+
+@keyframes image {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  #weather, #location {
-    text-align: center;
-    font-family: 'Bowlby One';
+  50% {
+    transform: rotate(30deg);
   }
-  #weather{
-    font-size: 120px;
-    color: #FFBA08;
-    height: 100px;
+  100% {
+    transform: rotate(0deg);
   }
-  #location {
-    grid-column: 0/1;
-    grid-row: 2;
-    color: #E85D04;  }  
-  .img{
-    grid-column: 0/1;
-    grid-row:3/4
+}
+.image {
+  animation-name: image;
+  animation-duration: 10s;
+}
+
+#weather,
+#location {
+  text-align: center;
+  font-family: "Bowlby One";
+}
+#weather {
+  font-size: 120px;
+  color: #ffba08;
+  height: 100px;
+}
+#location {
+  grid-column: 0/1;
+  grid-row: 2;
+  color: #e85d04;
+}
+img {
+  grid-column: 0/1;
+  grid-row: 3/4;
+}
+img {
+  width: 1000px;
+  height: 500px;
+}
+@media screen and (max-width: 500px) {
+  img {
+    width: 400px;
+    height: 300px;
   }
- img {
-    width: 1000px;
-    height: 500px;
+  #weather #location {
+    height: 50px;
   }
-  @media screen and (max-width:500px) {
-    .img {
-      width: 400px;
-      height: 300px;
-    }
-    #weather #location{
-      height: 50px;
-    }
-    .container{
-      margin-top: 50px;
-      height: 900px;
-    }
+  .container {
+    margin-top: 50px;
+    height: 700px;
   }
+}
