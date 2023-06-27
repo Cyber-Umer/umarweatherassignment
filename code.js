@@ -21,6 +21,12 @@ function success(position){
 
       document.getElementById("weather").innerHTML=`${weather}°C`;
       document.getElementById("location").innerHTML=`Location:${location}`;
+      if(weather<5){
+        document.getElementById("img").src="snow.png";
+      }
+      if(weather>35){
+        document.getElementById("img").src="superhot.svg";
+      }
     })
 }
 
